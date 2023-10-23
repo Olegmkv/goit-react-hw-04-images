@@ -24,13 +24,6 @@ export const App = () => {
     loadingQuery(q, page, typeFetch);
   }, [q, page, typeFetch]);
 
-  useEffect(() => {
-    window.addEventListener('keydown', (evt) => evt.code === 'Escape' && setModalOpen(false));
-    return () => {
-      window.removeEventListener('keydown', (evt) => evt.code === 'Escape' && setModalOpen(false));
-    }
-  }, [modalOpen])
-
   //зміна параметру відбору галереї
   const handlerFind = (evt) => {
     evt.preventDefault();
